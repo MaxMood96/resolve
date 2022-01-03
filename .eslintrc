@@ -26,6 +26,12 @@
     },
     "overrides": [
         {
+            "files": "bin/**",
+            "rules": {
+                "no-process-exit": "off",
+            },
+        },
+        {
             "files": "example/**",
             "rules": {
                 "no-console": 0,
@@ -50,5 +56,9 @@
                 "no-unused-vars": [2, { "vars": "all", "args": "none" }],
             },
         },
+    ],
+
+    "ignorePatterns": [
+        "./test/resolver/malformed_package_json/package.json",
     ],
 }
